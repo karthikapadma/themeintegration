@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Egits_BrandsList::topbrands" title="Top Brands" module="Egits_BrandsList" sortOrder="10" resource="Egits_BrandsList::topbrands" />
+		<add id="Egits_BrandsList::topbrandschild" title="Top Brands List" module="Egits_BrandsList" sortOrder="20" parent="Egits_BrandsList::topbrands" action="topbrands/grid/index" resource="Egits_BrandsList::topbrandschild" />
+	</menu>
+</config>

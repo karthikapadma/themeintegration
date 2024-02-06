@@ -1,0 +1,10 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceBlock name="cms.page" remove="true" />
+        <referenceContainer name="content">
+            <!-- Your home page content blocks and containers go here -->
+            <block class="Magento\Framework\View\Element\Template" name="custom.slider" template="Magento_Theme::slider.phtml" />
+        </referenceContainer>
+    </body>
+</page>

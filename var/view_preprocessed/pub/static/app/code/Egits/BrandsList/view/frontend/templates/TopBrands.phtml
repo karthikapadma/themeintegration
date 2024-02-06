@@ -1,0 +1,29 @@
+ <script>
+        require(['jquery', 'carousel'], function($) {
+            $('.top-brands-slider').owlCarousel({
+                loop: true,
+                dots: false,
+                autoPlay: 2000,
+                responsive: {
+                    0: {
+                        autoWidth: true,
+                        margin: 10
+                    },
+                    768: {
+                        items: 4
+                    },
+                    860: {
+                        items: 5
+                    },
+                    992: {
+                        items: 4
+                    },
+                    1300: {
+                        items: 5
+                    },
+                    1500: {
+                        items: 6
+                    }
+                }
+            })
+        })</script><?php $brands = $block->getBrandCollection(); ?> <section class="top-brands-section"><div class="page-main"><div class="content-heading"><h2 class="title">Top brands</h2></div><ul class="owl-carousel owl-theme top-brands-slider"><?php foreach ($brands as $brand) { ?> <li class="top-brands-list"><a href="#"><figure class="top-brands-image" style="background-image: url('<?php echo $brand['image']; ?>');"></figure><h4><?php echo $brand['name']; ?></h4></a></li> <?php } ?></ul></div></section>

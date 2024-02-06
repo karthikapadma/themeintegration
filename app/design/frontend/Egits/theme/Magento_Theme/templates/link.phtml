@@ -1,0 +1,58 @@
+<div class="header-wishlist" data-bind="scope: 'wishlist'">
+    <a <?= /* @noEscape */ $block->getLinkAttributes() ?> class="icon">
+        <!-- ko if: wishlist().counter -->
+        <span data-bind="text: wishlist().counter.split(' ')[0]" class="counter qty"></span>
+        <!-- /ko -->
+    </a>
+
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "wishlist": {
+                        "component": "Magento_Wishlist/js/view/wishlist"
+                    }
+                }
+            },
+            "Magento_Wishlist/js/view/wishlist": {
+                "counterSelector": ".counter.qty"
+            }
+        }
+    }
+</script>
+<style>
+    .header-wishlist .icon {
+        position: relative;
+        display: inline-block;
+    }
+
+    .header-wishlist .wishlist-icon {
+        background-color: black;
+        width: 20px;
+        /* Adjust as needed */
+        height: 20px;
+        /* Adjust as needed */
+        border-radius: 30%;
+        display: inline-block;
+        margin-right: 5px;
+        /* Adjust as needed */
+    }
+
+    .counter.qty {
+        background-color: black;
+        color: white;
+        padding: 7px 6px;
+        /* Adjust as needed */
+        border-radius: 5px;
+        /* Adjust as needed */
+        position: absolute;
+        top: -1px;
+        /* Adjust as needed */
+        right: -16px;
+        /* Adjust as needed */
+        font-size: 8px;
+        /* Adjust as needed */
+    }
+</style>

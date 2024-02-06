@@ -1,0 +1,16 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <!-- Your home page content blocks and containers go here -->
+            <block class="Egits\BrandsList\Block\TopBrands" name="custom.TopBrands.block" template="Egits_BrandsList::TopBrands.phtml" after="custom.product.block" />   
+        </referenceContainer>
+    </body>
+    <head>
+      <css src="css/owl.carousel.min.css" />
+        <css src="css/owl.theme.default.min.css" />
+        <css src="css/style.css" />
+        <css src="css/styles-l.css" />
+        <css src="css/styles-m.css" />
+    </head>
+</page>
+ 

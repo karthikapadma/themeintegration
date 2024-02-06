@@ -1,0 +1,59 @@
+<script>
+    require(['jquery', 'carousel'], function($) {
+        $('.top-category-slider').owlCarousel({
+            loop: true,
+            dots: false,
+            autoPlay: 2000,
+            responsive: {
+                0: {
+                    autoWidth: true,
+                    margin: 10
+                },
+                768: {
+                    items: 4
+                },
+                800: {
+                    items: 4
+                },
+                900: {
+                    items: 5
+                },
+                1000: {
+                    items: 6
+                },
+                1200: {
+                    items: 7
+                },
+                1300: {
+                    items: 8
+                },
+                1500: {
+                    items: 9
+                }
+            }
+        });
+    });
+</script>
+
+
+<?php
+
+$matchingCategories = $block->getCategories();
+?>
+<section class="top-category-section">
+    <div class="page-main">
+        <div class="content-heading">
+            <h2 class="title">Top Categories</h2>
+        </div>
+        <ul class="owl-carousel owl-theme top-category-slider">
+            <?php foreach ($matchingCategories as $category): ?>
+                <li class="top-category-list">
+                    <a href="#">
+                        <figure class="top-category-image" style="background-image: url('<?php echo $category['image']; ?>');"></figure>
+                        <h4><?php echo $category['name']; ?></h4>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</section>
